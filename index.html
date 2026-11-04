@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0B7A86">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ménage">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<script>if("serviceWorker" in navigator && /^https?:/.test(location.protocol)){ window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); }); }</script>
 <title>Planning Ménage</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2828,7 +2837,7 @@ function render(){
   if(!st.me){ app.innerHTML = loginView(); return; }
   var modal = "";
   if(st.modal) modal = st.modal.type === "house" ? houseModal() : (st.modal.type === "assign" ? assignModal() : (st.modal.type === "assignw" ? assignWorkersModal() : (st.modal.type === "notifs" ? notifModal() : (st.modal.type === "msg" ? msgModal() : (st.modal.type === "chat" ? chatModal() : formModal())))));
-  app.innerHTML = header() + tabs() + '<main>' + view() + '</main>' + '<footer class="ver">v52 · 04/11</footer>' + modal + lightbox() + fabHtml();
+  app.innerHTML = header() + tabs() + '<main>' + view() + '</main>' + '<footer class="ver">v53 · 04/11</footer>' + modal + lightbox() + fabHtml();
 }
 
 /* ───────── Actions ───────── */
