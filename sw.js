@@ -1,5 +1,5 @@
 /* Service worker v53 — يخزّن هيكل التطبيق فقط، أما البيانات (Supabase) فلا تُخزَّن أبدًا */
-const CACHE = "menage-v53";
+const CACHE = "menage-v54";
 const SHELL = ["./", "index.html", "manifest.json", "icons/icon-192.png", "icons/icon-512.png"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
